@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(version: 2018_11_30_200803) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "equipment", force: :cascade do |t|
+  create_table "photo_equipments", force: :cascade do |t|
     t.string "name"
     t.string "category"
-    t.string "description"
+    t.text "description"
     t.integer "studio_id"
     t.string "photo_path"
     t.datetime "created_at", null: false

@@ -1,9 +1,9 @@
-class CreateEquipment < ActiveRecord::Migration[5.2]
+class CreatePhotoEquipments < ActiveRecord::Migration[5.2]
   def change
-    create_table :equipment do |t|
+    create_table :photo_equipments do |t|
       t.string :name
       t.string :category
-      t.string :description
+      t.text :description
       t.integer :studio_id
       t.string :photo_path
 

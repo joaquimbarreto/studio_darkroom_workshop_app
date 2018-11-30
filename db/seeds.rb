@@ -1,10 +1,21 @@
-Equipment.destroy_all
+PhotoEquipment.destroy_all
 Studio.destroy_all
 Room.destroy_all
 Photographer.destroy_all
 
+studios = Studio.create ([
+  {
+    name: "2illiffeyard", address: "2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 6852 5509", email: "bookings@2iliffeyard.co.uk", manager: "Joaquim Baretto", kitchen: true, darkroom: true, parking: true, wi_fi: true, underground_station: "Kennington"
+  },
+  {
+    name: "RandomStudio", address: "2 Studio Street, London, WERKJ3928, UK", telephone_number: "+44 (0)17 9345 0000", email: "bookings@randomstudio.co.uk", manager: "Dan K", kitchen: true, darkroom: true, parking: true, wi_fi: false, underground_station: "Liverpool Street"
+  },
+  {
+    name: "StudioPaul", address: "2 Roady Road, London, SE3 ERO, UK", telephone_number: "+44 (0)77 9858 4450", email: "bookings@studiopaul.co.uk", manager: "Paul Clark", kitchen: true, darkroom: true, parking: false, wi_fi: true, underground_station: "Moorgate"
+  }
+  ])
 
-equipments = Equipment.create([
+photo_equipments = PhotoEquipment.create([
   {
     name: "Bolt VB-11 Bare Bulb Flash Kit with Cyclone PP-400DR Power Pack",
     category: "Lighting",
@@ -130,18 +141,6 @@ rooms = Room.create([
     name: "Main studio room", studio_id: 3, dimensions: "10m x 6m", description: "Very large photography studio with full blackout and self-contained kitchen area.", photo_path: "assets/images/7a9c51056c0eddb899425f1d69849b0b.jpg"
   }
   ])
-
-  studios = Studio.create ([
-    {
-      name: "2illiffeyard", address: "2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 6852 5509", email: "bookings@2iliffeyard.co.uk", manager: "Joaquim Baretto", kitchen: true, darkroom: true, parking: true, wi_fi: true, underground_station: "Kennington"
-    },
-    {
-      name: "RandomStudio", address: "2 Studio Street, London, WERKJ3928, UK", telephone_number: "+44 (0)17 9345 0000", email: "bookings@randomstudio.co.uk", manager: "Dan K", kitchen: true, darkroom: true, parking: true, wi_fi: false, underground_station: "Liverpool Street"
-    },
-    {
-      name: "StudioPaul", address: "2 Roady Road, London, SE3 ERO, UK", telephone_number: "+44 (0)77 9858 4450", email: "bookings@studiopaul.co.uk", manager: "Paul Clark", kitchen: true, darkroom: true, parking: false, wi_fi: true, underground_station: "Moorgate"
-    }
-    ])
 
   photographers = Photographer.create ([
     {
