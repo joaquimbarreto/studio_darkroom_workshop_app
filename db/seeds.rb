@@ -5,7 +5,7 @@ Photographer.destroy_all
 
 studios = Studio.create ([
   {
-    name: "2illiffeyard", address: "2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 6852 5509", email: "bookings@2iliffeyard.co.uk", manager: "Joaquim Baretto", kitchen: true, darkroom: true, parking: true, wi_fi: true, underground_station: "Kennington"
+    name: "2iliffeyard", address: "2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 6852 5509", email: "bookings@2iliffeyard.co.uk", manager: "Joaquim Baretto", kitchen: true, darkroom: true, parking: true, wi_fi: true, underground_station: "Kennington"
   },
   {
     name: "RandomStudio", address: "2 Studio Street, London, WERKJ3928, UK", telephone_number: "+44 (0)17 9345 0000", email: "bookings@randomstudio.co.uk", manager: "Dan K", kitchen: true, darkroom: true, parking: true, wi_fi: false, underground_station: "Liverpool Street"
