@@ -144,16 +144,22 @@ rooms = Room.create([
 
   photographers = Photographer.create ([
     {
-      first_name: "Joaquim", last_name: "Barreto", user_name: "jbarreto", password: "password", email: "joaquim@2iliffeyard.co.uk", telephone_number: "+44 932498232398", age: 35, bio: "I'm one hell of a cool guy who like taking photos, I'm learning to code right now so watch this space Disney.", speciality: "Everything", is_admin?: true
+      first_name: "Joaquim", last_name: "Barreto", user_name: "joaquim", password: "password", email: "joaquim@2iliffeyard.co.uk", telephone_number: "+44 7879117888", age: 35, bio: "I'm one hell of a cool guy who like taking photos, I'm learning to code right now so watch this space Disney.", speciality: "Everything", is_admin?: true
     },
     {
-      first_name: "Paul", last_name: "Clark", user_name: "pclark", password: "password", email: "paul@studiopaul.co.uk", telephone_number: "+44 9329328049898", age: 28, bio: "Yes I'm a real photographer", speciality: "Taking photos", is_admin?: true
+      first_name: "Paul", last_name: "Clark", user_name: "paul", password: "password", email: "paul@studiopaul.co.uk", telephone_number: "+44 9329328049898", age: 28, bio: "Yes I'm a real photographer", speciality: "Taking photos", is_admin?: true
     }
     {
-      first_name: "John", last_name: "Smith", user_name: "jsmith", password: "password", email: "jsmith@gmail.co.uk", telephone_number: "+44 9323423498", age: 60, bio: "Hi my name is John, I'm a photographer.", speciality: "Weddings", is_admin?: false
+      first_name: "Alan", last_name: "Robertson", user_name: "alan", password: "password", email: "alan@22iliffeyard.co.uk", telephone_number: "+44 7730327043", age: 60, bio: "Hi my name is Alan, I'm a photographer.", speciality: "Weddings", is_admin?: false
     },
     {
-      first_name: "Joe", last_name: "Bloggs", user_name: "jbloggs", password: "password", email: "jbloggs@yahoo.co.uk", telephone_number: "+44 93292343249898", age: 40, bio: "I like taking photos of stuff", speciality: "Yes", is_admin?: false
+      first_name: "John", last_name: "Whitfield", user_name: "john", password: "password", email: "johnwhitfield@msn.com", telephone_number: "+44 7768525509", age: 40, bio: "I like taking photos of stuff", speciality: "Product", is_admin?: false
+    },
     }
+      first_name: "Harry", last_name: "Isaacs", user_name: "harry", password: "password", email: "johnwhitfield@msn.com", telephone_number: "+44 7768525509", age: 40, bio: "I like taking photos of stuff", speciality: "Glamour", is_admin?: false
+    }
+    }
+      first_name: "Justin", last_name: "Barton", user_name: "justin", password: "password", email: "justin@justinbarton.com", telephone_number: "+44 7957336830", age: 40, bio: "I like taking photos of stuff", speciality: "Product", is_admin?: false
+    }
+
     ])
- 
