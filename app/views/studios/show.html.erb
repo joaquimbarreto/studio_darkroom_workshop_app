@@ -1,0 +1,20 @@
+<h1><%= @studio.name %></h1>
+<h3><%= @studio.address %></h3>
+<p><%= @studio.underground_station %></p>
+<% @rooms.each do |r| %>
+  <div class="room">
+    <%= r.name %>
+    <%= image_tag(r.photo_path) %>
+  </div>
+<% end %>
+
+
+<% if @studio.wi_fi %>
+  Free Wi-Fi!
+<% end %>
+<% if @studio.parking %>
+  Free parking!
+<% end %>
+
+<h3><%= @studio.telephone_number %></h3>
+<h3><%= @studio.email %></h3>
