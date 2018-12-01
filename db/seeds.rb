@@ -117,28 +117,44 @@ photo_equipments = PhotoEquipment.create([
 
 rooms = Room.create([
   {
-    name: "Shooting Room", studio_id: 1, dimensions: "4.5m x 6.6m", description: "Photographic studio with 30m2 floorspace. Fully equipped, with adjoining kitchen. Full blackout possible.", photo_path: "DSC_3784.jpg"
+    name: "Shooting Room", studio_id: 1, dimensions: "4.5m x 6.6m",
+    description: "Photographic studio with 30m2 floorspace. Fully equipped, with adjoining kitchen. Full blackout possible.",
+    photo_path: "rooms/DSC_3784.jpg"
   },
   {
-    name: "Darkroom", studio_id: 1, dimensions: "2.7m x 4.9m", description: "Darkroom with full facilities.", photo_path: "plan_studio-de99f8bf.png"
+    name: "Darkroom", studio_id: 1, dimensions: "2.7m x 4.9m",
+    description: "Darkroom with full facilities.",
+    photo_path: "rooms/plan_studio-de99f8bf.png"
   },
   {
-    name: "Shooting Room 1", studio_id: 2, dimensions: "3m x 4.2m", description: "Small shooting room perfect for close-up product shots", photo_path: "84263364-behind-the-scenes-of-shooting-video-production-in-a-studio-with-small-set-of-professional-lighting-e.jpg"
+    name: "Shooting Room 1", studio_id: 2, dimensions: "3m x 4.2m",
+    description: "Small shooting room perfect for close-up product shots",
+    photo_path: "rooms/84166888-behind-the-scenes-of-shooting-video-production-in-a-studio-with-small-set-of-professional-lighting-e.jpg"
   },
   {
-    name: "Darkroom", studio_id: 2, dimensions: "2.7m x 4.9m", description: "Darkroom with full facilities.", photo_path: "SB_Darkroom_t958.jpg"
+    name: "Darkroom", studio_id: 2, dimensions: "2.7m x 4.9m",
+    description: "Darkroom with full facilities.",
+    photo_path: "rooms/SB_Darkroom_t958.jpg"
   },
   {
-    name: "Shooting Room 2", studio_id: 2, dimensions: "5.4m x 6.4m", description: "Larger studio with with all facilities.", photo_path: "venue-yellow-hives-pj-kl-small-event-space-photo-shoot-interview_m1479873221_m1483525250.JPG"
+    name: "Shooting Room 2", studio_id: 2, dimensions: "5.4m x 6.4m",
+    description: "Larger studio with with all facilities.",
+    photo_path: "rooms/venue-yellow-hives-pj-kl-small-event-space-photo-shoot-interview_m1479873221_m1483525250.JPG"
   },
   {
-    name: "Darkroom", studio_id: 3, dimensions: "4m x 2m", description: "Darkroom with full facilities.", photo_path: "MG_2527_stuart_darkroom_email_copy_1024x1024.jpg"
+    name: "Darkroom", studio_id: 3, dimensions: "4m x 2m",
+    description: "Darkroom with full facilities.",
+    photo_path: "rooms/MG_2527_stuart_darkroom_email_copy_1024x1024.jpg"
   },
   {
-    name: "Second studio room", studio_id: 3, dimensions: "5m x 6", description: "Multi-purpose photographic studio. Full blackout possible.", photo_path: "MG_2527_stuart_darkroom_email_copy_1024x1024.jpg"
+    name: "Second studio room", studio_id: 3, dimensions: "5m x 6",
+    description: "Multi-purpose photographic studio. Full blackout possible.",
+    photo_path: "rooms/Photo_Studio_-_22_Feb._2011"
   },
   {
-    name: "Main studio room", studio_id: 3, dimensions: "10m x 6m", description: "Very large photography studio with full blackout and self-contained kitchen area.", photo_path: "7a9c51056c0eddb899425f1d69849b0b.jpg"
+    name: "Main studio room", studio_id: 3, dimensions: "10m x 6m",
+    description: "Very large photography studio with full blackout and self-contained kitchen area.",
+    photo_path: "rooms/7a9c51056c0eddb899425f1d69849b0b.jpg"
   }
   ])
 
