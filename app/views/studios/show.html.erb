@@ -3,7 +3,8 @@
 <p><%= @studio.underground_station %></p>
 <% @rooms.each do |r| %>
   <div class="room">
-    <%= r.name %>
+    <strong><%= r.name %></strong>
+      <br>
     <%= image_tag(r.photo_path) %>
   </div>
 <% end %>
