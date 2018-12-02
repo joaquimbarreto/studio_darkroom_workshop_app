@@ -1,1 +1,6 @@
 <h1><%= @photographer.name %></h1>
+<% @photographer.bookings.each do |b| %>
+<ul>
+  <li><%= b.studio.name %></li>
+</ul>
+<% end %>
