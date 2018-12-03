@@ -1,0 +1,2 @@
+class PhotoEquipmentBooking < ApplicationRecord
+end

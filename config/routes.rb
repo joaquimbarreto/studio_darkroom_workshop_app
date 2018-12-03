@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :photo_equipment_bookings
   get 'welcome/index'
   root 'welcome#index'
   resources :bookings
