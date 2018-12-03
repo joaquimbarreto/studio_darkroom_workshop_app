@@ -1,21 +1,20 @@
-<h1><%= @studio.name %></h1>
-<h3><%= @studio.address %></h3>
-<p><%= @studio.underground_station %></p>
-
-<% @rooms.each do |r| %>
-  <strong><%= link_to r.name, studio_room_path(@studio, r) %></strong>
-  <br>
-  <div class="room_img" >
-    <%= image_tag(r.photo_path) %>
+<div class="container mt-4">
+  <h1><%= @studio.name %></h1>
+  <div class="card-deck">
+    <% @rooms.each do |r| %>
+    <div class="card">
+      <img class="card-img-top" src="<%= image_tag(r.photo_path) %>" alt="studios">
+      <div class="card-body">
+          <h5 class="card-title"><%= link_to r.name, studio_room_path(@studio, r) %></h5>
+          <p class="card-text"><%= r.description %>
+            <% if @studio.wi_fi %>Wi-Fi Available.
+        <% end %>
+        <% if @studio.parking %>
+          Free parking!
+        <% end %></p>
+        <a href="new_booking_path" class="btn btn-danger">Book</a>
+      </div>
+    </div>
+    <% end %>
   </div>
-<% end %>
-
-<% if @studio.wi_fi %>
-  Free Wi-Fi!
-<% end %>
-<% if @studio.parking %>
-  Free parking!
-<% end %>
-
-<h3><%= @studio.telephone_number %></h3>
-<h3><%= @studio.email %></h3>
+</div>

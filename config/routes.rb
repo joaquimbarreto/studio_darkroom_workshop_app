@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :photographers
   resources :photo_equipments
   resources :studios do
-    resources :rooms
+  resources :rooms
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

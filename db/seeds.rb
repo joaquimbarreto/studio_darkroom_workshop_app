@@ -5,10 +5,10 @@ Photographer.destroy_all
 
 studios = Studio.create ([
   {
-    name: "2 Iliffe Yard Studio", address: "2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 6852 5509", email: "bookings@2iliffeyard.co.uk", manager: "John Whitfield", kitchen: true, darkroom: true, parking: true, wi_fi: true, underground_station: "Kennington"
+    name: "2 Iliffe Yard Studio", address: "2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 6852 5509", email: "bookings@2iliffeyard.co.uk", manager: "John Whitfield", kitchen: true, darkroom: true, parking: true, wi_fi: true, underground_station: "Kennington", description: "Photographic studio and darkroom.", photo_path: "studios/peacock_yard.jpg"
   },
   {
-    name: "Pullens Yards", address: "c/- 2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 3032 7043", email: "bookings@randomstudio.co.uk", manager: "Alan Robertson", kitchen: false, darkroom: false, parking: true, wi_fi: false, underground_station: "Kennington"
+    name: "Pullens Yards", address: "c/- 2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 3032 7043", email: "bookings@randomstudio.co.uk", manager: "Alan Robertson", kitchen: false, darkroom: false, parking: true, wi_fi: false, underground_station: "Kennington", description: "All three Pullens common yards areas.", photo_path: "studios/peacock_yard.jpg"
   }
   ])
 
