@@ -1,0 +1,2 @@
+class PhotoEquipmentBookingsController < ApplicationController
+end
