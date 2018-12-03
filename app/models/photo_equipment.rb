@@ -1,3 +1,3 @@
 class PhotoEquipment < ApplicationRecord
-  belongs_to :studio
+  has_many :photo_equipment_bookings
 end

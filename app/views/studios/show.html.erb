@@ -3,9 +3,9 @@
 <p><%= @studio.underground_station %></p>
 
 <% @rooms.each do |r| %>
-  <div class="room">
-    <strong><%= link_to r.name, studio_room_path(@studio, r) %></strong>
-      <br>
+  <strong><%= link_to r.name, studio_room_path(@studio, r) %></strong>
+  <br>
+  <div class="room_img" >
     <%= image_tag(r.photo_path) %>
   </div>
 <% end %>
