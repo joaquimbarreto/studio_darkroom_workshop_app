@@ -28,5 +28,3 @@
 
 Gemfile.lock
 .env
-
-db/seeds.rb
