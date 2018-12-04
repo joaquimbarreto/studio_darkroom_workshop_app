@@ -1,5 +1,7 @@
 class Booking < ApplicationRecord
-  belongs_to :studio
+  belongs_to :room
   belongs_to :photographer
-  has_many :photo_equipment_bookings
+  has_one :studio, through: :room
+  # has_many :photo_equipment_bookings
+
 end

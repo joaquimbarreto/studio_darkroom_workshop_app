@@ -2,15 +2,11 @@ PhotoEquipment.destroy_all
 Studio.destroy_all
 Room.destroy_all
 Photographer.destroy_all
+Booking.destroy_all
 
-studios = Studio.create ([
-  {
-    name: "2 Iliffe Yard Studio", address: "2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 6852 5509", email: "bookings@2iliffeyard.co.uk", manager: "John Whitfield", kitchen: true, darkroom: true, parking: true, wi_fi: true, underground_station: "Kennington"
-  },
-  {
-    name: "Pullens Yards", address: "c/- 2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 3032 7043", email: "bookings@randomstudio.co.uk", manager: "Alan Robertson", kitchen: false, darkroom: false, parking: true, wi_fi: false, underground_station: "Kennington"
-  }
-  ])
+iliffe_yard = Studio.create(name: "2 Iliffe Yard Studio", address: "2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 6852 5509", email: "bookings@2iliffeyard.co.uk", manager: "John Whitfield", kitchen: true, darkroom: true, parking: true, wi_fi: true, underground_station: "Kennington")
+
+pullens_yards = Studio.create(name: "Pullens Yards", address: "c/- 2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 3032 7043", email: "bookings@randomstudio.co.uk", manager: "Alan Robertson", kitchen: false, darkroom: false, parking: true, wi_fi: false, underground_station: "Kennington")
 
 photo_equipments = PhotoEquipment.create([
   {
@@ -52,40 +48,41 @@ photo_equipments = PhotoEquipment.create([
   ])
 
 
-rooms = Room.create([
-  {
-    name: "Photographic Room", studio_id: 1, dimensions: "4.5m x 6.6m",
+iliffe_room_1 = Room.create(
+    name: "Photographic Room", studio: iliffe_yard, dimensions: "4.5m x 6.6m",
     description: "Photographic studio with 30m2 floorspace. Fully equipped, with adjoining kitchen. Full blackout possible.",
     photo_path: "rooms/DSC_3784.jpg"
-  },
-  {
-    name: "Darkroom", studio_id: 1, dimensions: "2.7m x 4.9m",
+)
+iliffe_room_2 = Room.create(
+    name: "Darkroom", studio: iliffe_yard, dimensions: "2.7m x 4.9m",
     description: "Darkroom with full facilities.",
     photo_path: "rooms/plan_studio-de99f8bf.png"
-  },
-  {
-    name: "Clements Yard", studio_id: 2, dimensions: "3m x 4.2m",
+)
+clements_room_1 = Room.create(
+    name: "Clements Yard", studio: pullens_yards, dimensions: "3m x 4.2m",
     description: "Small shooting room perfect for close-up product shots",
     photo_path: "rooms/clements_yard.jpg"
-  },
-  {
-    name: "Peacock Yard", studio_id: 2, dimensions: "2.7m x 4.9m",
+)
+clements_room_2 = Room.create(
+    name: "Peacock Yard", studio: pullens_yards, dimensions: "2.7m x 4.9m",
     description: "Darkroom with full facilities.",
     photo_path: "rooms/peacock_yard.jpg"
-  },
-  {
-    name: "Iliffe Yard", studio_id: 2, dimensions: "5.4m x 6.4m",
+)
+clements_rooms_3 = Room.create(
+    name: "Iliffe Yard", studio: pullens_yards, dimensions: "5.4m x 6.4m",
     description: "Larger studio with with all facilities.",
     photo_path: "rooms/iliffe_yard.JPG"
-  }
-])
+)
 
 photographers = Photographer.create ([
+    {
+      first_name: "admin", last_name: "admin", username: "admin", password: "password", email: "admin@2iliffeyard.co.uk", telephone_number: "+44 3248092892348", age: 35, bio: "I'm one hell of a cool guy who like taking photos, I'm learning to code right now so watch this space Disney.", specialty: "Everything", is_admin?: true
+    },
     {
       first_name: "Joaquim", last_name: "Barreto", username: "joaquim", password: "password", email: "joaquim@2iliffeyard.co.uk", telephone_number: "+44 7879117888", age: 35, bio: "I'm one hell of a cool guy who like taking photos, I'm learning to code right now so watch this space Disney.", specialty: "Everything", is_admin?: true
     },
     {
-      first_name: "Paul", last_name: "Clark", username: "paul", password: "password", email: "paul@studiopaul.co.uk", telephone_number: "+44 9329328049898", age: 28, bio: "Yes I'm a real photographer", specialty: "Taking photos", is_admin?: true
+      first_name: "Paul", last_name: "Clark", username: "paul", password: "password", email: "paul@studiopaul.co.uk", telephone_number: "+44 9328049898", age: 28, bio: "Yes I'm a real photographer", specialty: "Taking photos", is_admin?: true
     },
     {
       first_name: "Alan", last_name: "Robertson", username: "alan", password: "password", email: "alan@2iliffeyard.co.uk", telephone_number: "+44 7730327043", age: 60, bio: "Hi my name is Alan, I'm a photographer.", specialty: "Weddings", is_admin?: false
