@@ -3,7 +3,7 @@
   <div class="card-deck">
     <% @rooms.each do |r| %>
     <div class="card">
-      <img class="card-img-top" src="<%= image_tag(r.photo_path) %>" alt="studios">
+      <a href="<%= studio_room_path(@studio, r) %>" ><img class="card-img-top" <%= image_tag (r.photo_path) %></a>
       <div class="card-body">
           <h5 class="card-title"><%= link_to r.name, studio_room_path(@studio, r) %></h5>
           <p class="card-text"><%= r.description %>

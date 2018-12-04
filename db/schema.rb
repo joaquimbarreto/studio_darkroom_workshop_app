@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_03_155452) do
+ActiveRecord::Schema.define(version: 2018_12_03_104047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2018_12_03_155452) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
     t.string "email"
     t.string "telephone_number"
     t.integer "age"
@@ -74,10 +74,10 @@ ActiveRecord::Schema.define(version: 2018_12_03_155452) do
     t.boolean "parking"
     t.boolean "wi_fi"
     t.string "underground_station"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "description"
     t.string "photo_path"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

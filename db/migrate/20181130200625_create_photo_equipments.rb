@@ -4,7 +4,6 @@ class CreatePhotoEquipments < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :category
       t.text :description
-      t.integer :studio_id
       t.string :photo_path
 
       t.timestamps
