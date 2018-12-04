@@ -11,6 +11,8 @@ class CreateStudios < ActiveRecord::Migration[5.2]
       t.boolean :parking
       t.boolean :wi_fi
       t.string :underground_station
+      t.string :description
+      t.string :photo_path
 
       t.timestamps
     end

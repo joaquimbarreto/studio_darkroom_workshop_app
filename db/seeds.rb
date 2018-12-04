@@ -4,9 +4,33 @@ Room.destroy_all
 Photographer.destroy_all
 Booking.destroy_all
 
-iliffe_yard = Studio.create(name: "2 Iliffe Yard Studio", address: "2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 6852 5509", email: "bookings@2iliffeyard.co.uk", manager: "John Whitfield", kitchen: true, darkroom: true, parking: true, wi_fi: true, underground_station: "Kennington")
+iliffe_yard = Studio.create(
+  name: "2 Iliffe Yard Studio",
+  address: "2 Iliffe Yard Kennington, London, SE17 3QA, UK",
+  telephone_number: "+44 (0)77 6852 5509",
+  email: "bookings@2iliffeyard.co.uk",
+  manager: "John Whitfield",
+  kitchen: true,
+  darkroom: true,
+  parking: true,
+  wi_fi: true,
+  underground_station: "Kennington",
+  description: "Photographic studio and darkroom.",
+  photo_path: "iliffe_yard.jpg")
 
-pullens_yards = Studio.create(name: "Pullens Yards", address: "c/- 2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 3032 7043", email: "bookings@randomstudio.co.uk", manager: "Alan Robertson", kitchen: false, darkroom: false, parking: true, wi_fi: false, underground_station: "Kennington")
+pullens_yards = Studio.create(
+  name: "Pullens Yards",
+  address: "c/- 2 Iliffe Yard Kennington, London, SE17 3QA, UK",
+  telephone_number: "+44 (0)77 3032 7043",
+  email: "bookings@randomstudio.co.uk",
+  manager: "Alan Robertson",
+  kitchen: false,
+  darkroom: false,
+  parking: true,
+  wi_fi: false,
+  underground_station: "Kennington",
+  description: "All three Pullens common yards areas.",
+  photo_path: "peacock_yard.jpg")
 
 photo_equipments = PhotoEquipment.create([
   {
@@ -44,59 +68,51 @@ photo_equipments = PhotoEquipment.create([
     category: "Background Paper",
     description:  "Colorama Paper Background 3.55 x 15m Black SKU LL CO868 (AVAILABLE). High quality paper, fine tooth non-reflective surface",
     photo_path: "photo_equipments/background_paper_black.png"
-  },
+  }
   ])
 
 
 iliffe_room_1 = Room.create(
     name: "Photographic Room", studio: iliffe_yard, dimensions: "4.5m x 6.6m",
     description: "Photographic studio with 30m2 floorspace. Fully equipped, with adjoining kitchen. Full blackout possible.",
-    photo_path: "rooms/DSC_3784.jpg"
-)
+    photo_path: "rooms/DSC_3784.jpg")
 iliffe_room_2 = Room.create(
     name: "Darkroom", studio: iliffe_yard, dimensions: "2.7m x 4.9m",
     description: "Darkroom with full facilities.",
-    photo_path: "rooms/plan_studio-de99f8bf.png"
-)
-clements_room_1 = Room.create(
+    photo_path: "plan_studio-de99f8bf.png")
+clements_yard = Room.create(
     name: "Clements Yard", studio: pullens_yards, dimensions: "3m x 4.2m",
-    description: "Small shooting room perfect for close-up product shots",
-    photo_path: "rooms/clements_yard.jpg"
-)
-clements_room_2 = Room.create(
+    description: "Situated off Iliffe Street, this yard is the smallest of the three Pullen's yards.",
+    photo_path: "clements_yard.jpg")
+peacock_yard = Room.create(
     name: "Peacock Yard", studio: pullens_yards, dimensions: "2.7m x 4.9m",
-    description: "Darkroom with full facilities.",
-    photo_path: "rooms/peacock_yard.jpg"
-)
-clements_rooms_3 = Room.create(
+    description: "Situated off Iliffe Street, this yard has a triangular shape.",
+    photo_path: "peacock_yard.jpg")
+iliffe_yard = Room.create(
     name: "Iliffe Yard", studio: pullens_yards, dimensions: "5.4m x 6.4m",
-    description: "Larger studio with with all facilities.",
-    photo_path: "rooms/iliffe_yard.JPG"
-)
+    description: "Situated off Crampton Street, this yard is a long straight narrow road.",
+    photo_path: "iliffe_yard.JPG")
 
-photographers = Photographer.create ([
+photographers = Photographer.create([
     {
-      first_name: "admin", last_name: "admin", username: "admin", password: "password", email: "admin@2iliffeyard.co.uk", telephone_number: "+44 3248092892348", age: 35, bio: "I'm one hell of a cool guy who like taking photos, I'm learning to code right now so watch this space Disney.", specialty: "Everything", is_admin?: true
+      first_name: "Joaquim", last_name: "Barreto", username: "joaquim", password_digest: "password", email: "joaquim@2iliffeyard.co.uk", telephone_number: "+44 7879117888", age: 35, bio: "I'm one hell of a cool guy who like taking photos, I'm learning to code right now so watch this space Disney.", specialty: "Everything", is_admin?: true
     },
     {
-      first_name: "Joaquim", last_name: "Barreto", username: "joaquim", password: "password", email: "joaquim@2iliffeyard.co.uk", telephone_number: "+44 7879117888", age: 35, bio: "I'm one hell of a cool guy who like taking photos, I'm learning to code right now so watch this space Disney.", specialty: "Everything", is_admin?: true
+      first_name: "Paul", last_name: "Clark", username: "paul", password_digest: "password", email: "paul@studiopaul.co.uk", telephone_number: "+44 9329328049898", age: 28, bio: "Yes I'm a real photographer", specialty: "Taking photos", is_admin?: true
     },
     {
-      first_name: "Paul", last_name: "Clark", username: "paul", password: "password", email: "paul@studiopaul.co.uk", telephone_number: "+44 9328049898", age: 28, bio: "Yes I'm a real photographer", specialty: "Taking photos", is_admin?: true
+      first_name: "Alan", last_name: "Robertson", username: "alan", password_digest: "password", email: "alan@2iliffeyard.co.uk", telephone_number: "+44 7730327043", age: 60, bio: "Hi my name is Alan, I'm a photographer.", specialty: "Weddings", is_admin?: false
     },
     {
-      first_name: "Alan", last_name: "Robertson", username: "alan", password: "password", email: "alan@2iliffeyard.co.uk", telephone_number: "+44 7730327043", age: 60, bio: "Hi my name is Alan, I'm a photographer.", specialty: "Weddings", is_admin?: false
+      first_name: "John", last_name: "Whitfield", username: "john", password_digest: "password", email: "johnwhitfield@msn.com", telephone_number: "+44 7768525509", age: 40, bio: "I like taking photos of stuff", specialty: "Product", is_admin?: false
     },
     {
-      first_name: "John", last_name: "Whitfield", username: "john", password: "password", email: "johnwhitfield@msn.com", telephone_number: "+44 7768525509", age: 40, bio: "I like taking photos of stuff", specialty: "Product", is_admin?: false
+      first_name: "Harry", last_name: "Isaacs", username: "harry", password_digest: "password", email: "johnwhitfield@msn.com", telephone_number: "+44 7768525509", age: 40, bio: "I like taking photos of stuff", specialty: "Glamour", is_admin?: false
     },
     {
-      first_name: "Harry", last_name: "Isaacs", username: "harry", password: "password", email: "johnwhitfield@msn.com", telephone_number: "+44 7768525509", age: 40, bio: "I like taking photos of stuff", specialty: "Glamour", is_admin?: false
+      first_name: "Justin", last_name: "Barton", username: "justin", password_digest: "password", email: "justin@justinbarton.com", telephone_number: "+44 7957336830", age: 40, bio: "I like taking photos of stuff", specialty: "Product", is_admin?: false
     },
     {
-      first_name: "Justin", last_name: "Barton", username: "justin", password: "password", email: "justin@justinbarton.com", telephone_number: "+44 7957336830", age: 40, bio: "I like taking photos of stuff", specialty: "Product", is_admin?: false
-    },
-    {
-      first_name: "Lee", last_name: "Miller", username: "leemiller", password: "password", email: "lee@miller.com", telephone_number: "+44 7879117888", age: 40, bio: "People who understand how to negotiate are always going to do better", specialty: "Fashion", is_admin?: false
+      first_name: "Lee", last_name: "Miller", username: "leemiller", password_digest: "password", email: "lee@miller.com", telephone_number: "+44 7879117888", age: 40, bio: "People who understand how to negotiate are always going to do better", specialty: "Fashion", is_admin?: false
     }
 ])
