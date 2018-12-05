@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :photo_equipments
   resources :studios do
     resources :rooms do
-      resources :bookings
+      resources :bookings, only: [:index, :new, :create]
     end
   end
+
+  resources :bookings, only: [:show, :edit, :update, :destroy]
 end

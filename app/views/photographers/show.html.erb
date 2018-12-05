@@ -1,6 +1,8 @@
-<h1><%= @photographer.name %></h1>
-<% @photographer.bookings.sort.each do |b| %>
+<h1>Hello, <%= @photographer.first_name %>!</h1>
+<h2>Your bookings:</h2>
+<% @bookings.sort.each do |b| %>
 <ul>
-  <li><%= b.room.name %>, <%= b.studio.name %> <%= b.date %></li>
+  <li><%= b.room.name %>, <%= b.studio.name %> <%= b.date %>
+    <%= button_to "Delete booking", b, method: :delete, class: "btn btn-danger" %></li>
 </ul>
 <% end %>
