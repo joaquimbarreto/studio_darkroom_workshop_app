@@ -5,7 +5,7 @@
       <div class="card-body">
           <h5 class="card-title"><%= @room.name %></h5>
           <p class="card-text"><%= @room.description %></p>
-        <a href="new_booking_path" class="btn btn-danger">Book</a>
+        <%= link_to "Book", "#{@room.id}/bookings/new", class: "btn btn-danger" %>
       </div>
     </div>
   </div>
