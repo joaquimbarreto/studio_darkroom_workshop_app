@@ -13,8 +13,8 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locations</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/1">2 Iliffe Yard</a>
-            <a class="dropdown-item" href="/2">Pullens Yards</a>
+            <a class="dropdown-item" href="/studios/1">2 Iliffe Yard Studio</a>
+            <a class="dropdown-item" href="/studios/2">Pullens Yards</a>
           </div>
         </li>
       </ul>
@@ -25,24 +25,69 @@
             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
               Login
             </button>
-
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+                  <% if logged_in? %>
+
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Logged In</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+
+                    <div class="modal-body">
+                      <p> You are logged in as <%= link_to current_photographer.username, current_photographer %> </p>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger"><%= link_to "Log out", logout_path, method: "post" %></button>
+                    </div>
+
+                  <% else %>
+
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+
+                    <div class="modal-body">
+                      <% if flash[:errors] %>
+                        <ul>
+                          <% flash[:errors].each do |e|  %>
+                            <li style="color: red;"><%= e %></li>
+                          <% end %>
+                        </ul>
+                      <% end %>
+
+                      <%= form_tag welcome_index_path do %>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1"><%= label_tag :username %></span>
+                        </div>
+                        <input type="text" <%= text_field_tag :username %>
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1"><%= label_tag :password %></span>
+                        </div>
+                        <input type="password" <%= password_field_tag :password  %>
+                      </div>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger"><%= submit_tag "Enter"%></button>
+                    <% end %>
+                    </div>
+
+                  <% end %>
                   </div>
-                  <div class="modal-body">
-                    <form method="post" action='' name="login_form">
-                      <p><input type="text" class="span3" name="eid" id="email" placeholder="Username"></p>
-                      <p><input type="password" class="span3" name="passwd" placeholder="Password"></p>
-                      <p><button type="submit" class="btn btn-danger">Enter</button></p>
-                    </form>
-                  </div>
-                </div>
+                  <% if flash[:authorized] %>
+                    <p> <%= flash[:authorized] %> </p>
+                  <% end %>
               </div>
             </div>
         	</div>
