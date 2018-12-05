@@ -10,9 +10,6 @@ Rails.application.routes.draw do
       resources :bookings
     end
   end
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 0702f6a35fe012b338f04c65840a1791bdbecf66
 end
