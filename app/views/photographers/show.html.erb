@@ -1,6 +1,6 @@
 <h1><%= @photographer.name %></h1>
-<% @photographer.bookings.each do |b| %>
+<% @photographer.bookings.sort.each do |b| %>
 <ul>
-  <li><%= b.studio.name %></li>
+  <li><%= b.room.name %>, <%= b.studio.name %> <%= b.date %> <%= b.time_slot %></li>
 </ul>
 <% end %>

@@ -1,0 +1,10 @@
+<%= form_for @booking do |f| %>
+<%= f.label :room %>
+<%= f.collection_select :room_id, @rooms, :id, :name %>
+<%= f.collection_select :photographer_id, @photographers, :id, :name %>
+<%= f.label :date %>
+<%= f.date_field :date %>
+<%= f.label :time_slot %>
+<%= f.select :time_slot, time_slot: ['09:00-13:00', '13:00-18:00', '09:00-18:00'] %>
+<%= f.submit %>
+<% end %>

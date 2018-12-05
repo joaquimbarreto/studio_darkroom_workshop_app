@@ -2,6 +2,7 @@ PhotoEquipment.destroy_all
 Studio.destroy_all
 Room.destroy_all
 Photographer.destroy_all
+Booking.destroy_all
 
 studios = Studio.create ([
   {
@@ -54,9 +55,8 @@ photo_equipments = PhotoEquipment.create([
   ])
 
 
-rooms = Room.create([
-  {
-    name: "Photographic Room", studio_id: 1, dimensions: "4.5m x 6.6m",
+iliffe_room_1 = Room.create(
+    name: "Photographic Room", studio: iliffe_yard, dimensions: "4.5m x 6.6m",
     description: "Photographic studio with 30m2 floorspace. Fully equipped, with adjoining kitchen. Full blackout possible.",
     photo_path1: "photographicstudio_portrait.jpg",
     photo_path2: "photographicstudio_landscape.jpg"
