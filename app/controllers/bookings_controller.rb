@@ -8,14 +8,20 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.create(booking_params)
-    redirect_to @booking.photographer
+    booking = Booking.new(booking_params)
+    if booking.valid?
+      booking.save
+      redirect_to booking.photographer
+    else
+      flash[:errors] = booking.errors.full_messages
+      redirect_to '/'
+    end
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:photographer_id, :date, :room_id, :time_slot).merge({room_id: params[:room_id]})
+    params.require(:booking).permit(:photographer_id, :date).merge({room_id: params[:room_id]})
   end
 
 end
