@@ -58,7 +58,8 @@ ActiveRecord::Schema.define(version: 2018_12_03_104047) do
     t.integer "studio_id"
     t.string "dimensions"
     t.text "description"
-    t.string "photo_path"
+    t.string "photo_path1"
+    t.string "photo_path2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

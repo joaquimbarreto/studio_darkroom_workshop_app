@@ -6,11 +6,11 @@ Photographer.destroy_all
 studios = Studio.create ([
   {
     name: "2 Iliffe Yard Studio", address: "2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 6852 5509", email: "bookings@2iliffeyard.co.uk", manager: "John Whitfield", kitchen: true, darkroom: true, parking: true, wi_fi: true, underground_station: "Kennington",
-     description: "Photographic studio and darkroom.", photo_path: "iliffe_yard.jpg"
+     description: "Photographic studio and darkroom.", photo_path: "2iliffeyardstudio.jpg"
   },
   {
     name: "Pullens Yards", address: "c/- 2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 3032 7043", email: "bookings@randomstudio.co.uk", manager: "Alan Robertson", kitchen: false, darkroom: false, parking: true, wi_fi: false, underground_station: "Kennington",
-     description: "All three Pullens common yards areas.", photo_path: "peacock_yard.jpg"
+     description: "All three Pullens common yards areas.", photo_path: "pullensyard.jpeg"
   }
   ])
 
@@ -58,27 +58,32 @@ rooms = Room.create([
   {
     name: "Photographic Room", studio_id: 1, dimensions: "4.5m x 6.6m",
     description: "Photographic studio with 30m2 floorspace. Fully equipped, with adjoining kitchen. Full blackout possible.",
-    photo_path: "plan_studio-de99f8bf.png"
+    photo_path1: "photographicstudio_portrait.jpg",
+    photo_path2: "photographicstudio_landscape.jpg"
   },
   {
     name: "Darkroom", studio_id: 1, dimensions: "2.7m x 4.9m",
     description: "Darkroom with full facilities.",
-    photo_path: "plan_studio-de99f8bf.png"
+    photo_path1: "darkroom_portrait.jpg",
+    photo_path2: "darkroom_landscape.jpg"
   },
   {
     name: "Clements Yard", studio_id: 2, dimensions: "3m x 4.2m",
     description: "Situated off Iliffe Street, this yard is the smallest of the three Pullen's yards.",
-    photo_path: "clements_yard.jpg"
+    photo_path1: "clementsyard_portrait.jpg",
+    photo_path2: "clementsyard_landscape.jpg"
   },
   {
     name: "Peacock Yard", studio_id: 2, dimensions: "2.7m x 4.9m",
     description: "Situated off Iliffe Street, this yard has a triangular shape.",
-    photo_path: "peacock_yard.jpg"
+    photo_path1: "peacockyard_portrait.jpg",
+    photo_path2: "peacockyard_landscape.jpg"
   },
   {
     name: "Iliffe Yard", studio_id: 2, dimensions: "5.4m x 6.4m",
     description: "Situated off Crampton Street, this yard is a long straight narrow road.",
-    photo_path: "iliffe_yard.jpg"
+    photo_path1: "iliffeyard_portrait.jpg",
+    photo_path2: "iliffeyard_landscape.jpg"
   }
 ])
 
