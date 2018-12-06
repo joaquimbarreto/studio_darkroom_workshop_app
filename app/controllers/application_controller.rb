@@ -21,9 +21,9 @@ class ApplicationController < ActionController::Base
   end
 
   def authorized_for(photographer_id)
-    if current_photographer.admin == true
+    if current_photographer.is_admin? == true
       true
-    elsif current_photographer.id != user_id.to_i
+    elsif current_photographer.id != photographer_id.to_i
       flash[:authorized] = "You cannot view a page that does not belong to you"
       redirect_to studios_path
     end

@@ -89,24 +89,24 @@ iliffe_room_1 = Room.create([{
 
 photographers = Photographer.create([
     {
-      first_name: "Joaquim", last_name: "Barreto", username: "joaquim", password_digest: "password", email: "joaquim@2iliffeyard.co.uk", telephone_number: "+44 7879117888", age: 35, bio: "I'm one hell of a cool guy who like taking photos, I'm learning to code right now so watch this space Disney.", specialty: "Everything", is_admin?: true
+      first_name: "Joaquim", last_name: "Barreto", username: "joaquim", password: "password", email: "joaquim@2iliffeyard.co.uk", telephone_number: "+44 7879117888", age: 35, bio: "I'm one hell of a cool guy who like taking photos, I'm learning to code right now so watch this space Disney.", specialty: "Everything", is_admin?: true
     },
     {
-      first_name: "Paul", last_name: "Clark", username: "paul", password_digest: "password", email: "paul@studiopaul.co.uk", telephone_number: "+44 9329328049898", age: 28, bio: "Yes I'm a real photographer", specialty: "Taking photos", is_admin?: true
+      first_name: "Paul", last_name: "Clark", username: "paul", password: "password", email: "paul@studiopaul.co.uk", telephone_number: "+44 9329328049898", age: 28, bio: "Yes I'm a real photographer", specialty: "Taking photos", is_admin?: true
     },
     {
-      first_name: "Alan", last_name: "Robertson", username: "alan", password_digest: "password", email: "alan@2iliffeyard.co.uk", telephone_number: "+44 7730327043", age: 60, bio: "Hi my name is Alan, I'm a photographer.", specialty: "Weddings", is_admin?: false
+      first_name: "Alan", last_name: "Robertson", username: "alan", password: "password", email: "alan@2iliffeyard.co.uk", telephone_number: "+44 7730327043", age: 60, bio: "Hi my name is Alan, I'm a photographer.", specialty: "Weddings", is_admin?: false
     },
     {
-      first_name: "John", last_name: "Whitfield", username: "john", password_digest: "password", email: "johnwhitfield@msn.com", telephone_number: "+44 7768525509", age: 40, bio: "I like taking photos of stuff", specialty: "Product", is_admin?: false
+      first_name: "John", last_name: "Whitfield", username: "john", password: "password", email: "johnwhitfield@msn.com", telephone_number: "+44 7768525509", age: 40, bio: "I like taking photos of stuff", specialty: "Product", is_admin?: false
     },
     {
-      first_name: "Harry", last_name: "Isaacs", username: "harry", password_digest: "password", email: "johnwhitfield@msn.com", telephone_number: "+44 7768525509", age: 40, bio: "I like taking photos of stuff", specialty: "Glamour", is_admin?: false
+      first_name: "Harry", last_name: "Isaacs", username: "harry", password: "password", email: "johnwhitfield@msn.com", telephone_number: "+44 7768525509", age: 40, bio: "I like taking photos of stuff", specialty: "Glamour", is_admin?: false
     },
     {
-      first_name: "Justin", last_name: "Barton", username: "justin", password_digest: "password", email: "justin@justinbarton.com", telephone_number: "+44 7957336830", age: 40, bio: "I like taking photos of stuff", specialty: "Product", is_admin?: false
+      first_name: "Justin", last_name: "Barton", username: "justin", password: "password", email: "justin@justinbarton.com", telephone_number: "+44 7957336830", age: 40, bio: "I like taking photos of stuff", specialty: "Product", is_admin?: false
     },
     {
-      first_name: "Lee", last_name: "Miller", username: "leemiller", password_digest: "password", email: "lee@miller.com", telephone_number: "+44 7879117888", age: 40, bio: "People who understand how to negotiate are always going to do better", specialty: "Fashion", is_admin?: false
+      first_name: "Lee", last_name: "Miller", username: "leemiller", password: "password", email: "lee@miller.com", telephone_number: "+44 7879117888", age: 40, bio: "People who understand how to negotiate are always going to do better", specialty: "Fashion", is_admin?: false
     }
 ])
