@@ -1,22 +1,29 @@
 class SessionsController < ApplicationController
+  skip_before_action :verify_authenticity_token, except: [:create]
 
   def new
   end
 
   def create
     photographer = Photographer.find_by(username: params[:username])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to studios_path
+    if photographer && photographer.authenticate(params[:password])
+      session[:photographer_id] = photographer.id
+      redirect_to welcome_index_path
     else
       flash[:errors] = ["Invalid username or password"]
-      redirect_to login_path
+
     end
   end
 
   def destroy
-    session[:user_id] = nil
-    redirect_to login_path
+    session[:photographer_id] = nil
+    redirect_to welcome_index_path
+  end
+
+  private
+
+  def photographer_params
+    params.permit(:username, :password)
   end
 
 end
