@@ -1,6 +1,7 @@
 <div class="container">
   <div class="jumbotron">
   <h1>Hello, <%= @photographer.first_name %>!</h1>
+  <% if @bookings.length != 0 %>
   <h2>Your bookings:</h2>
   </div>
   <% @bookings.sort.each do |b| %>
@@ -11,5 +12,8 @@
         <br>
         <%= button_to "Delete booking", b, method: :delete, class: "btn btn-danger" %></li>
     </ul>
+    <% end %>
+    <% else %>
+    <h2>You don't have any bookings yet!</h2>  
   <% end %>
 </div>

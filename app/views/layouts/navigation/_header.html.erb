@@ -20,6 +20,7 @@
       </ul>
 
         <% if logged_in? %>
+        <%= link_to current_photographer.name, current_photographer, class:"nav-link" %>
           <form action="<%=logout_path%>" method="post">
             <%= render 'layouts/navigation/logout' %>
           </form>
@@ -28,7 +29,7 @@
             <%= render 'layouts/navigation/login' %>
           </form>
         <% end %>
-        
+
     </div>
   </nav>
 </div>

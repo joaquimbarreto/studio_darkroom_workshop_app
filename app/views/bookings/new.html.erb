@@ -3,7 +3,6 @@
     <div class="card">
       <div class="card-body">
         <%= form_for [@studio, @room, @booking] do |f| %>
-          <%= f.collection_select :photographer_id, @photographers, :id, :name %>
           <%= f.label :date %>
           <%= f.date_field :date %>
           <%= f.submit class: "btn btn-danger"%>

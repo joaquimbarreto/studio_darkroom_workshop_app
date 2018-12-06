@@ -13,6 +13,7 @@ before_action :find_photographers, only: [:new, :edit]
     @studio = Studio.find(params[:studio_id])
     @room = Room.find(params[:room_id])
     booking = Booking.new(booking_params)
+    booking.photographer_id = session[:photographer_id]
     if booking.valid?
       booking.save
       redirect_to booking.photographer
