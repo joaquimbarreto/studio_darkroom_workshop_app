@@ -1,8 +1,9 @@
-<h1>Hello, <%= @photographer.first_name %>!</h1>
-<h2>Your bookings:</h2>
-<% @bookings.sort.each do |b| %>
-<ul>
-  <li><%= b.room.name %>, <%= b.studio.name %> <%= b.date %>
-    <%= button_to "Delete booking", b, method: :delete, class: "btn btn-danger" %></li>
-</ul>
-<% end %>
+<div class="jumbotron">
+  <h1>Hello, <%= @photographer.first_name %>!</h1>
+  <h2>Your bookings:</h2>
+  <% @bookings.sort.each do |b| %>
+    <ul>
+      <li><%= b.room.name %>, <%= b.studio.name %> <%= b.date %> <%= link_to "Update booking", edit_booking_path(b), class: "btn btn-danger"%><%= button_to "Delete booking", b, method: :delete, class: "btn btn-danger" %></li>
+    </ul>
+  <% end %>
+</div>
