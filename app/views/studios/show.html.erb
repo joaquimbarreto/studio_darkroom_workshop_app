@@ -1,6 +1,6 @@
-<div class="container mt-4">
+<div class="container mt-4 mb-6">
   <h1><%= @studio.name %></h1>
-  <div class="card-deck">
+  <div class="card-deck m-auto">
     <% @rooms.each do |r| %>
     <div class="card">
       <a href="<%= studio_room_path(@studio, r) %>" ><img class="card-img-top" <%= image_tag (r.photo_path1) %></a>
