@@ -6,6 +6,7 @@ class Booking < ApplicationRecord
 
   validates :date, presence: true
   validates :date, uniqueness: true
+  validate :future_date
 
 
 
@@ -14,12 +15,17 @@ class Booking < ApplicationRecord
 
 
 
-  # validate :future_date
-  #
-  # def future_date
-  #   if date.present? && date < Date.today
-  #     errors.add(:date, "can't be in the past")
-  #   end
-  # end
+  validate :future_date
+
+  def future_date
+    if date.present? && date < Date.today
+      errors.add(:date, "can't be in the past")
+    end
+  end
+
+
+  def date_month_year
+    user_date = self.date.strftime("Booked for: %A, %d %B %Y")
+  end
 
 end

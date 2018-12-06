@@ -1,30 +1,44 @@
 class BookingsController < ApplicationController
 
 before_action :find_booking, only: [:edit, :update, :destroy]
-before_action :find_photographer, only: [:edit, :update, :destroy]
-
+before_action :find_photographers, only: [:new, :edit]
 
   def new
-    @room = Room.find(params[:room_id])
     @studio = Studio.find(params[:studio_id])
+    @room = Room.find(params[:room_id])
     @booking = Booking.new
-    @photographers = Photographer.all
   end
 
   def create
+    @studio = Studio.find(params[:studio_id])
+    @room = Room.find(params[:room_id])
     booking = Booking.new(booking_params)
     if booking.valid?
       booking.save
       redirect_to booking.photographer
     else
       flash[:errors] = booking.errors.full_messages
-      redirect_to '/'
+      redirect_to "/studios/#{@studio.id}/rooms/#{@room.id}/bookings/new"
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    @booking.update(update_booking_params)
+    if @booking.valid?
+      redirect_to @booking.photographer
+    else
+      flash[:errors] = @booking.errors.full_messages
+      redirect_to edit_booking_path(@booking)
     end
   end
 
   def destroy
+    photographer = @booking.photographer
     @booking.destroy
-    redirect_to photographer_path(@photographer)
+    redirect_to photographer_path(photographer)
   end
 
   private
@@ -33,12 +47,16 @@ before_action :find_photographer, only: [:edit, :update, :destroy]
     params.require(:booking).permit(:photographer_id, :date).merge({room_id: params[:room_id]})
   end
 
+  def update_booking_params
+    params.require(:booking).permit(:date)
+  end
+
   def find_booking
     @booking = Booking.find(params[:id])
   end
 
-  def find_photographer
-    @photographer = Photographer.find(params[:id])
+  def find_photographers
+    @photographers = Photographer.all
   end
 
 end
