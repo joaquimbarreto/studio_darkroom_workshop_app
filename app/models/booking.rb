@@ -8,15 +8,6 @@ class Booking < ApplicationRecord
   validates :date, uniqueness: true
   validate :future_date
 
-
-
-# bookings can have the same dates but not the same date and overlapping timeslot
-
-
-
-
-  validate :future_date
-
   def future_date
     if date.present? && date < Date.today
       errors.add(:date, "can't be in the past")
