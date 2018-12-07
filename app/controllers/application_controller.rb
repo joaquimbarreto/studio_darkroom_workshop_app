@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
       true
     elsif current_photographer.id != photographer_id.to_i
       flash[:authorized] = "You cannot view a page that does not belong to you"
-      redirect_to studios_path
+      redirect_to current_photographer
     end
   end
 end

@@ -17,11 +17,14 @@
   </head>
   <body>
     <%= render 'layouts/navigation/header'%>
-    <div id="body" style="margin-bottom: 6%;">
+    <div id="body" style="min-height: calc(85vh - 3rem); margin-top: 100px">
       <% if flash[:errors] %>
         <% flash[:errors].each do |e| %>
           <p style="color: red;"> <%= e %> </p>
         <% end %>
+      <% end %>
+      <% if flash[:authorized] %>
+        <p style="color: red;"> <%= flash[:authorized] %> </p>
       <% end %>
 
     <%= yield %>
