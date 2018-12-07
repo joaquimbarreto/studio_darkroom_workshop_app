@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # resources :photo_equipment_bookings
   # resources :photo_equipments
   resources :photographers, only: :show
-  resources :studios do
+  resources :studios only: :show do
     resources :rooms, only: :show do
       resources :bookings, only: [:index, :new, :create]
     end
