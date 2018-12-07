@@ -11,7 +11,7 @@ studios = Studio.create ([
   },
   {
     name: "Pullens Yards", address: "c/- 2 Iliffe Yard Kennington, London, SE17 3QA, UK", telephone_number: "+44 (0)77 3032 7043", email: "bookings@randomstudio.co.uk", manager: "Alan Robertson", kitchen: false, darkroom: false, parking: true, wi_fi: false, underground_station: "Kennington",
-     description: "All three Pullens common yards areas.", photo_path: "pullensyard.jpeg"
+     description: "All three Pullens common yards areas.", photo_path: "pullensyard.jpg"
   }
   ])
 
