@@ -1,9 +1,9 @@
 <div class="container">
   <div class="jumbotron">
   <h1>Hello, <%= @photographer.first_name %>!</h1>
+  </div>
   <% if @bookings.length != 0 %>
   <h2>Your bookings:</h2>
-  </div>
   <% @bookings.sort.each do |b| %>
     <ul>
       <li><strong><%= b.room.name %></strong>, <%= b.studio.name %>    <%= link_to "Update booking", edit_booking_path(b), class: "btn btn-danger"%>
@@ -14,6 +14,6 @@
     </ul>
     <% end %>
     <% else %>
-    <h2>You don't have any bookings yet!</h2>  
+    <h2>You don't have any bookings yet!</h2>
   <% end %>
 </div>

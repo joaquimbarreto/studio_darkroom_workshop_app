@@ -4,4 +4,8 @@ class PhotoEquipmentsController < ApplicationController
     @photo_equipment = PhotoEquipment.find(params[:id])
   end
 
+  def index
+    @photo_equipments = PhotoEquipment.all
+  end
+
 end

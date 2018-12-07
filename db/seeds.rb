@@ -20,37 +20,37 @@ photo_equipments = PhotoEquipment.create([
     name: "Bowens Gemini 400 Kit",
     category: "Lighting",
     description: "The Bowens Gemini 400Rx Twin Head Umbrella Kit is part of the award-winning Gemini flash system which now includes two new models with built-in Pulsar radio. The Gemini Rx range is as compact and lightweight as the standard Gemini flash heads but now includes a built-in Pulsar radio receiver controlled via a simple, single push button. The Pulsar radio allows full control over 24 different radio zones, using four channels and six studio settings, enabling photographers to isolate various light sources or combining them and firing them all at once, without leaving your camera. The inclusion of the integrated Pulsar radio receiver coupled with the versatility of featuring both mains and battery power operation makes the Gemini Rx one of the most resourceful monolight systems available today. In addition to the 2 heads the kit includes a Pulsar Tx transmitter, 2 90cm umbrellas, 2 wide angle reflectors, 2 light stands, a traveller case, 2 modelling lamps, 2 mains leads and a sync lead.",
-    photo_path: "photo_equipments/bowens_400_kit.jpg"
+    photo_path: "bowens_400_kit.jpg"
   },
   {
     name: 'Bowens Gemini 250',
     category: "Lighting",
     description: "This is a Bowens Esprit Gemini 250 watt/second AC/DC monolight. This monolight can power down to 1/4 power, which makes it very suitable for use with digital cameras and for augmenting sunlight outdoors. Modeling light may be adjusted from full to 1/32 power. Compatible with all Bowens flash head accessories. The open-ended yoke design permits more angled positioning of the monolight.",
-    photo_path: "photo_equipments/bowens_250.jpeg"
+    photo_path: "bowens_250.jpeg"
   },
   {
     name: 'Elinchrom Fan',
     category: "Other",
     description: "The fan is equipped with regulator, which benefit you a free control on weak or strong wind, 3m speed-control cable and 5m power cable enable your remote operation,cylinder category metal casing, integration of metal fan blade with motor, compact structure, internationally advanced power frequency axial fan, flange installation, reliable connection, low power consumption (130W); high rotate speed (2600r/min); low noise (≤72dB); large air volume (20m3/min); light weight (net weight: 7kg); small size (Φ25cmx30cm)",
-    photo_path: "photo_equipments/elinchrom_fan.png"
+    photo_path: "elinchrom_fan.png"
   },
   {
     name: 'Steamer',
     category: "Other",
     description:  "This Rowenta 'IS6200 Compact Valet' garment steamer is tailor made to remove creases and even odours from all fabrics, including delicate ones, with a powerful vertical steam emission of 30g/min. The powerful steam emission is intended to smooth out even the tiniest of creases and go as far as hems and buttons without exposing clothing to potentially harmful hot metal or soleplates. It also boasts a quick sixty second heat up time and a removable 2.4L water tank for easy cleaning.",
-    photo_path: "photo_equipments/steamer.png"
+    photo_path: "steamer.png"
   },
   {
     name: 'White Seamless Photography Background Paper',
     category: "Background Paper",
     description:  "Colorama Paper Background 3.55 x 15m Black SKU LL CO868 (AVAILABLE). High quality paper, fine tooth non-reflective surface",
-    photo_path: "photo_equipments/background_paper_white.png"
+    photo_path: "background_paper_white.png"
   },
   {
     name: 'Black Photographic Studio Background Paper Roll',
     category: "Background Paper",
     description:  "Colorama Paper Background 3.55 x 15m Black SKU LL CO868 (AVAILABLE). High quality paper, fine tooth non-reflective surface",
-    photo_path: "photo_equipments/background_paper_black.png"
+    photo_path: "background_paper_black.png"
   }
   ])
 
